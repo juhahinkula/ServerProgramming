@@ -10,3 +10,7 @@ Server programming course demos
 - StudentCRUD - Studentlist application with CRUD operations
 - StudentJDBC - Studenlist application using JDBC (MariaDB)
 - StudentOneToMany - Studentlist application with OneToMany relationship
+
+## Week 3 - REST API
+
+## Week 4 - Spring Security
