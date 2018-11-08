@@ -12,5 +12,7 @@ Server programming course demos
 - StudentOneToMany - Studentlist application with OneToMany relationship
 
 ## Week 3 - REST API
+- HelloRest 
+- StudentListRest - REST API using Spring Data REST
 
 ## Week 4 - Spring Security
