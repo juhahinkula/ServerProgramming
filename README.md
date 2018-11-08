@@ -18,5 +18,5 @@ Server programming course demos
 ## Week 4 - Spring Security
 - SecureDemo - Spring Security added to studentlist
 - SecureStudentList - Studentlist with in-memory users (user/user and admin/admin)
-- SecureStudentUser - Studentlist with User entity and encrypted passwords
+- SecureStudentListUser - Studentlist with User entity and encrypted passwords
 - SecureSignup - Secured studentlist with sign-up
