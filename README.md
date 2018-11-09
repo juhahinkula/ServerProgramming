@@ -20,3 +20,7 @@ Server programming course demos
 - SecureStudentList - Studentlist with in-memory users (user/user and admin/admin)
 - SecureStudentListUser - Studentlist with User entity and encrypted passwords
 - SecureSignup - Secured studentlist with sign-up
+
+## Week 5 - Testing (JUnit)
+- HelloTest
+- StudentJpaTest - Studentlist application with JPA tests 
