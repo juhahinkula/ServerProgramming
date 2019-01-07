@@ -22,5 +22,5 @@ Server programming course demos
 - SecureSignup - Secured studentlist with sign-up
 
 ## Week 5 - Testing (JUnit)
-- HelloTest
+- HelloTest -Simple JUnit test demo
 - StudentJpaTest - Studentlist application with JPA tests 
