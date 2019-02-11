@@ -25,9 +25,7 @@ public class FileController {
     }
 
     @PostMapping("/upload")
-    public String singleFileUpload(@RequestParam("file") MultipartFile file, Model model) {
-    	System.out.println(uploadFolder);
-
+    public String fileUpload(@RequestParam("file") MultipartFile file, Model model) {
         if (file.isEmpty()) {
         	model.addAttribute("msg", "Upload failed");
             return "uploadstatus";
