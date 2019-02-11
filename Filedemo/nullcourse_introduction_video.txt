@@ -1,0 +1,7 @@
+Hello! My name is Juha. 
+
+This is introduction video about Server Programming course.
+
+In this video I will go through some basic stuff that is good to know.
+
+First we will take a look to course schedule

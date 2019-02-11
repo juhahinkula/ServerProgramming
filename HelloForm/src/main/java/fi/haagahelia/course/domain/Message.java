@@ -16,9 +16,6 @@ public class Message {
 	public void setMsg(String msg) {
 		this.msg = msg;
 	}
+
 	
-	@Override
-	public String toString() {
-		return "Message [msg=" + msg + "]";
-	}
 }
