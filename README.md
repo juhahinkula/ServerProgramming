@@ -5,7 +5,7 @@ Server programming course demos
 - HelloForm - Simple form
 - HelloFromValidation - Form with validation
 
-## Week 2 - JPA, Databases (Hibernate, H2)
+## Week 2 - JPA, Databases (Hibernate, H2, MariaDB)
 - StudentList - Studentlist application skeleton
 - StudentCRUD - Studentlist application with CRUD operations
 - StudentJDBC - Studenlist application using JDBC (MariaDB)
