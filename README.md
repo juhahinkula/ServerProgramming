@@ -11,9 +11,10 @@ Server programming course demos
 - StudentJDBC - Studenlist application using JDBC (MariaDB)
 - StudentOneToMany - Studentlist application with OneToMany relationship
 
-## Week 3 - REST API
+## Week 3 - REST API & File upload
 - HelloRest 
 - StudentListRest - REST API using Spring Data REST
+- Filedemo - File upload demo
 
 ## Week 4 - Spring Security
 - SecureDemo - Spring Security added to studentlist
@@ -24,4 +25,3 @@ Server programming course demos
 ## Week 5 - File upload & Testing (JUnit)
 - HelloTest -Simple JUnit test demo
 - StudentJpaTest - Studentlist application with JPA tests 
-- Filedemo - File upload demo
