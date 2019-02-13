@@ -15,6 +15,7 @@ Server programming course demos
 - HelloRest 
 - StudentListRest - REST API using Spring Data REST
 - Filedemo - File upload demo
+- FiledemoDb - File upload & download demo with H2 DB 
 
 ## Week 4 - Spring Security
 - SecureDemo - Spring Security added to studentlist
