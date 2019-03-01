@@ -6,6 +6,7 @@
     <link type="text/css" rel="stylesheet" href="css/bootstrap.min.css" th:href="@{css/bootstrap.min.css}" />
 </head>
 <body>
+<div class="container">
 	<div class="col-md-4">
 		<h1>Students</h1>
 	</div>
@@ -14,7 +15,7 @@
 	</div>
 	<div class="col-md-4" style="padding:20px 0">
 		<form th:action="@{/logout}" method="post">
-			<input type="submit" value="Sign Out" class="btn btn-danger"/>
+			<input type="submit" value="Sign Out" class="btn btn-sm btn-danger"/>
 		</form>
 	</div>
     <table class="table table-striped">
@@ -28,9 +29,10 @@
     		<td th:text="${student.firstName} + ' ' + ${student.lastName}"></td>
     		<td th:text="${student.email}"></td>
     		<td th:text="${student.department.name}"></td> 		
- 			<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${student.id})}" class="btn btn-danger">Delete</a></td>    		
+ 			<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${student.id})}" class="btn btn-xs btn-danger">Delete</a></td>    		
     	</tr>
      </table>
-	 <a href="/add" class="btn btn-success">Add Student</a>    	
+	 <a href="/add" class="btn btn-primary">Add Student</a>  
+</div>  	
 </body>
 </html>
