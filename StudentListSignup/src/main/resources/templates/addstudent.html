@@ -6,8 +6,8 @@
 	<link type="text/css" rel="stylesheet" th:href="@{css/bootstrap.min.css}" />
 </head>
 <body>
-	<h1>Add student</h1>
-	<div>
+	<div class="container">
+		<h2>Add student</h2>
 		<div class="col-md-4">
 		<form th:object="${student}" th:action="@{save}" action="#" method="post">
 		  	<label for="fname">Firstname</label>
@@ -26,7 +26,7 @@
     		</select>
 			
 			<div style="clear: both; display: block; height: 10px;"></div>
-			<input type="submit" class="btn btn-success" value="Save"></input>
+			<input type="submit" class="btn btn-primary" value="Save"></input>
 		</form>
 		</div>
 	</div>
