@@ -23,6 +23,6 @@ Server programming course demos
 - SecureStudentListUser - Studentlist with User entity and encrypted passwords
 - SecureSignup - Secured studentlist with sign-up
 
-## Week 5 - File upload & Testing (JUnit)
+## Week 5 - Testing (JUnit)
 - HelloTest -Simple JUnit test demo
 - StudentJpaTest - Studentlist application with JPA tests 
