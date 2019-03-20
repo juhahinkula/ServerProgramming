@@ -50,7 +50,6 @@ public class StudentController {
     }       
     
     // Add new student
-    @PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping(value = "/add")
     public String addStudent(Model model){
     	model.addAttribute("student", new Student());
@@ -66,6 +65,7 @@ public class StudentController {
     }    
 
     // Delete student
+    @PreAuthorize("hasAuthority('ADMIN')")
     @RequestMapping(value = "/delete/{id}", method = RequestMethod.GET)
     public String deleteStudent(@PathVariable("id") Long studentId, Model model) {
     	repository.deleteById(studentId);

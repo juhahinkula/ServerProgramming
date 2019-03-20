@@ -23,7 +23,7 @@ public class StudentController {
 	@Autowired
 	private DepartmentRepository drepository; 
 	
-	// Show all students
+	// Login page
     @RequestMapping(value="/login")
     public String login() {	
         return "login";

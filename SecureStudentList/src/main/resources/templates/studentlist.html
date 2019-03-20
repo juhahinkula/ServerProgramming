@@ -1,5 +1,5 @@
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org"  xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
+<html xmlns:th="http://www.thymeleaf.org" xmlns:sec="http://www.thymeleaf.org/thymeleaf-extras-springsecurity5">
 <head>
     <title>Studentlist</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -29,7 +29,7 @@
     		<td th:text="${student.firstName} + ' ' + ${student.lastName}"></td>
     		<td th:text="${student.email}"></td>
     		<td th:text="${student.department.name}"></td> 		
- 			<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${student.id})}" class="btn btn-xs btn-danger">Delete</a></td>    		
+ 				<td sec:authorize="hasRole('ADMIN')"><a th:href="@{/delete/{id}(id=${student.id})}" class="btn btn-xs btn-danger">Delete</a></td>    		
     	</tr>
      </table>
 	 <a href="/add" class="btn btn-primary">Add Student</a>  
