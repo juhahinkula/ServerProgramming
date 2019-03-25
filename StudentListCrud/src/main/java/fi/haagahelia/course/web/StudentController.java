@@ -15,7 +15,7 @@ public class StudentController {
 	@Autowired
 	private StudentRepository repository; 
 	
-    @RequestMapping(value="/studentlist")
+    @RequestMapping(value= {"/", "/studentlist"})
     public String studentList(Model model) {	
         model.addAttribute("students", repository.findAll());
         return "studentlist";
