@@ -14,7 +14,7 @@
     	<tr th:each = "student : ${students}">
     		<td th:text="${student.firstName} + ' ' + ${student.lastName}"></td>
     		<td th:text="${student.email}"></td>
- 			<td><a th:href="@{/delete/{id}(id=${student.id})}">Delete</a></td>    		
+ 				<td><a th:href="@{/delete/{id}(id=${student.id})}">Delete</a></td>    		
     	</tr>
      </table>
 	 <a href="/add">Add Student</a>    	
