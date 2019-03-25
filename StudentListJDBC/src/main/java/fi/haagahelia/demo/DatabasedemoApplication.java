@@ -1,17 +1,14 @@
 package fi.haagahelia.demo;
 
-import java.util.Arrays;
-import java.util.List;
-import java.util.stream.Collectors;
-import java.util.Map;
-
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
-import org.springframework.jdbc.core.JdbcTemplate;
+
+import fi.haagahelia.demo.domain.Student;
+import fi.haagahelia.demo.domain.StudentDAOImpl;
 
 @SpringBootApplication
 public class DatabasedemoApplication {
@@ -22,14 +19,15 @@ public class DatabasedemoApplication {
 	}
 	   
 	@Bean
-	public CommandLineRunner demo(JdbcTemplate jdbcTemplate) {
+	public CommandLineRunner demo(StudentDAOImpl studentDAO) {
 		return (args) -> {
 			// Database is created by using resources/schema.sql
 			
 			// Insert some demo data
-	        jdbcTemplate.update("insert into student(first_name, last_name) values (?, ?)", "John", "West");
-	        jdbcTemplate.update("insert into student(first_name, last_name) values (?, ?)", "Mike", "Mars");
-	        jdbcTemplate.update("insert into student(first_name, last_name) values (?, ?)", "Kate", "Johnson");
+	        studentDAO.save(new Student("John", "West"));
+	        studentDAO.save(new Student("Mike", "Mars"));
+	        studentDAO.save(new Student("Kate", "Johnson"));
+	       
 		};
 	}	
 }

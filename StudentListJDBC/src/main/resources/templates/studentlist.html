@@ -11,8 +11,9 @@
 		    <th>Name</th>
 		</tr>  
     	<tr th:each = "student : ${students}">
-    		<td th:text="${student.first_name} + ' ' + ${student.last_name}"></td>		
+    		<td th:text="${student.id} + ' ' +${student.firstName} + ' ' + ${student.lastName}"></td>		
     	</tr>
      </table>  	
+     <a href="/add">Add Student</a>
 </body>
 </html>
