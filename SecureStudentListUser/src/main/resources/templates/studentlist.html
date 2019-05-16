@@ -23,7 +23,7 @@
 		    <th>Name</th>
 		    <th>Email</th>
 		    <th>Department</th>
-		    <th sec:authorize="hasRole('ADMIN')"> </th>
+		    <th sec:authorize="hasAuthority('ADMIN')"> </th>
 		</tr>  
     	<tr th:each = "student : ${students}">
     		<td th:text="${student.firstName} + ' ' + ${student.lastName}"></td>
