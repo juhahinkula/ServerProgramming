@@ -1,5 +1,5 @@
 # Server Programming
-Server programming course demos
+Server programming course demos (Spring Boot)
 
 ## Week 1 - Models & Views
 - HelloForm - Simple form
