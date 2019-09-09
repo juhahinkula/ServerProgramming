@@ -20,7 +20,7 @@ public class StudentController {
 	private DepartmentRepository drepository; 
 	
 	// Show all students
-    @RequestMapping(value="/studentlist")
+    @RequestMapping(value={"/", "/studentlist"})
     public String studentList(Model model) {	
         model.addAttribute("students", repository.findAll());
         return "studentlist";
