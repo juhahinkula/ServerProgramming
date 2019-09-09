@@ -16,6 +16,7 @@
     		<td th:text="${student.firstName} + ' ' + ${student.lastName}"></td>
     		<td th:text="${student.email}"></td>
     		<td th:text="${student.department.name}"></td> 		
+ 			<td><a th:href="@{/edit/{id}(id=${student.id})}">Edit</a></td>    		
  			<td><a th:href="@{/delete/{id}(id=${student.id})}">Delete</a></td>    		
     	</tr>
      </table>

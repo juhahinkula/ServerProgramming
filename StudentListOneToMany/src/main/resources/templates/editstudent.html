@@ -1,0 +1,32 @@
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Studentlist</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+</head>
+<body>
+	<h1>Add student</h1>
+	<div>
+		<form th:object="${student}" th:action="@{../save}" action="#" method="post">
+			<input type="hidden" id="id" th:field="*{id}" />
+		  	<label for="fname">Firstname</label>
+			<input type="text" id="fname" th:field="*{firstName}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="lname">Lastname</label>
+			<input type="text" id="lname" th:field="*{lastName}" />
+			<div style="clear: both; display: block; height: 10px;"></div>
+		  	<label for="email">Email</label>
+			<input type="text" th:field="*{email}" />
+
+			<div style="clear: both; display: block; height: 10px;"></div>						
+		  	<label for="deplist">Department</label>
+			 <select id="deplist" th:field="*{department}" class="form-control">
+       			<option th:each="department: ${departments}" th:value="${department.departmentid}" th:text="${department.name}"></option>
+    		</select>
+			
+			<div style="clear: both; display: block; height: 10px;"></div>
+			<input type="submit" value="Save"></input>
+		</form>
+	</div>
+</body>
+</html>

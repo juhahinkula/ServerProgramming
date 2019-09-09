@@ -47,4 +47,13 @@ public class StudentController {
     	repository.deleteById(studentId);
         return "redirect:../studentlist";
     }     
-}
+
+
+    // Edit student
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public String editStudent(@PathVariable("id") Long studentId, Model model) {
+    	model.addAttribute("student", repository.findById(studentId));
+    	model.addAttribute("departments", drepository.findAll());
+    	return "editstudent";
+    }   
+ }
