@@ -20,7 +20,7 @@ public class StudentController {
 	private DepartmentRepository drepository; 
 	
 	// Show all students
-    @RequestMapping(value="/studentlist")
+    @RequestMapping(value={"/", "/studentlist"})
     public String studentList(Model model) {	
         model.addAttribute("students", repository.findAll());
         return "studentlist";
@@ -47,4 +47,13 @@ public class StudentController {
     	repository.deleteById(studentId);
         return "redirect:../studentlist";
     }     
-}
+
+
+    // Edit student
+    @RequestMapping(value = "/edit/{id}", method = RequestMethod.GET)
+    public String editStudent(@PathVariable("id") Long studentId, Model model) {
+    	model.addAttribute("student", repository.findById(studentId));
+    	model.addAttribute("departments", drepository.findAll());
+    	return "editstudent";
+    }   
+ }

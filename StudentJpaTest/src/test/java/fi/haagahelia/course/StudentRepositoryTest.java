@@ -26,7 +26,7 @@ public class StudentRepositoryTest {
         List<Student> students = repository.findByLastName("Johnson");
         
         assertThat(students).hasSize(1);
-        assertThat(students.get(0).getFirstName()).isEqualTo("Jim");
+        assertThat(students.get(0).getFirstName()).isEqualTo("John");
     }
     
     @Test
