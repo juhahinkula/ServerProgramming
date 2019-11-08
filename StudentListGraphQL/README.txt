@@ -9,6 +9,6 @@ Sample GraphQL query:
             email
             firstName
             lastName
-        }
-    }
+            department {name}
 
+    }
