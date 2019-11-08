@@ -2,10 +2,17 @@ type Query {
     students: [Student]
 }
 
+type Department {
+    departmentid: Int!
+    name: String
+}
+
 type Student {
     id: Int!
     firstName: String
     lastName: String
     email: String
+    department: Department
 }
+
 
