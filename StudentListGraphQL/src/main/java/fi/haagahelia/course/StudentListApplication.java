@@ -31,6 +31,8 @@ public class StudentListApplication {
 			
 			srepository.save(new Student("John", "Johnson", "john@john.com", drepository.findByName("IT").get(0)));
 			srepository.save(new Student("Katy", "Kateson", "kate@kate.com", drepository.findByName("Business").get(0)));	
+			srepository.save(new Student("Matt", "More", "matt@matt.com", drepository.findByName("Business").get(0)));	
+			srepository.save(new Student("Jack", "Russell", "jack@jack.com", drepository.findByName("IT").get(0)));	
 			
 			log.info("fetch all students");
 			for (Student student : srepository.findAll()) {
