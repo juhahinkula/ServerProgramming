@@ -2,6 +2,11 @@ type Query {
     students: [Student]
 }
 
+type Mutation {
+	createDepartment(name: String!): Department
+	createStudent(firstName: String!, lastName: String!, email: String!): Student 
+}
+
 type Department {
     departmentid: Int!
     name: String
