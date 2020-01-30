@@ -21,12 +21,8 @@ public class MessageController {
 	}
 
 	@RequestMapping(value = "/hello", method = RequestMethod.POST)
-	public String greetingSubmit(@Valid Message msg, BindingResult bindingResult, Model model) {
-
-
-			model.addAttribute("message", msg);
-			return "result";
-		
+	public String greetingSubmit(@ModelAttribute Message msg, Model model) {
+		model.addAttribute("message", msg);
+		return "result";
 	}
-
 }
