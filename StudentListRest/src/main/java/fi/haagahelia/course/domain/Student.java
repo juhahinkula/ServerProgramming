@@ -20,7 +20,6 @@ public class Student {
     private String email;
     
     @ManyToOne
-    @JsonIgnore
     @JoinColumn(name = "departmentid")
     private Department department;
 
