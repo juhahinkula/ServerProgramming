@@ -17,6 +17,7 @@ import fi.haagahelia.course.domain.StudentRepository;
 
 @Controller
 public class StudentController {
+	
 	@Autowired
 	private StudentRepository repository; 
 
