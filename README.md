@@ -7,7 +7,7 @@ Server programming course demos (Spring Boot)
 
 ## Week 2 - JPA, Databases (Hibernate, H2, MariaDB)
 - StudentList - Studentlist application skeleton
-- StudentCRUD - Studentlist application with CRUD operations
+- StudentListCRUD - Studentlist application with CRUD operations
 - StudentJDBC - Studenlist application using JDBC (MariaDB)
 - StudentOneToMany - Studentlist application with OneToMany relationship
 
