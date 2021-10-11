@@ -37,12 +37,12 @@ public class StudentRepositoryTest {
     	assertThat(student.getId()).isNotNull();
     }    
     @Test
-	public void deleteNewStudent() {
+    public void deleteNewStudent() {
 		List<Student> students = repository.findByLastName("Johnson");
 		Student student = students.get(0);
 		repository.delete(student);
 		List<Student> newStudents = repository.findByLastName("Johnson");
 		assertThat(newStudents).hasSize(0);
-	}
+     }
 
 }
