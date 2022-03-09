@@ -22,7 +22,6 @@ public class Student {
     
     @ManyToOne
     @JoinColumn(name = "departmentid")
-    @JsonManagedReference
     private Department department;
 
     public Student() {}
