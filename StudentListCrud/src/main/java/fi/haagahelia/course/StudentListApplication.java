@@ -7,8 +7,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.annotation.Bean;
 
-import fi.haagahelia.course.domain.Product;
-import fi.haagahelia.course.domain.ProductRepository;
 import fi.haagahelia.course.domain.Student;
 import fi.haagahelia.course.domain.StudentRepository;
 
@@ -22,7 +20,7 @@ public class StudentListApplication {
 	}
  
 	@Bean
-	public CommandLineRunner studentDemo(StudentRepository repository, ProductRepository prodrep) {
+	public CommandLineRunner studentDemo(StudentRepository repository) {
 		return (args) -> {
 			log.info("save a couple of students");
 			repository.save(new Student("Aku", "Johnson", "john@john.com"));
@@ -38,7 +36,7 @@ public class StudentListApplication {
 			for (Student student : repository.findByLastName("Naamio")) {
 				log.info(student.toString());
 			}
-			prodrep.save(new Product("Koiranmakkara"));
+
 		};
 	}
 	
