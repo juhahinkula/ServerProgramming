@@ -1,8 +1,6 @@
 package fi.haagahelia.course.domain;
 
-import javax.validation.constraints.NotEmpty;
-import javax.validation.constraints.Size;
-
+import jakarta.validation.constraints.*;
 
 public class SignupForm {
     @NotEmpty

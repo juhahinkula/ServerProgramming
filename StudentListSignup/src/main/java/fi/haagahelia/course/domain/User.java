@@ -1,6 +1,7 @@
 package fi.haagahelia.course.domain;
 
-import javax.persistence.*;
+import jakarta.persistence.*;
+
 
 @Entity
 public class User {
