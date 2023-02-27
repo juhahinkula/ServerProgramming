@@ -1,6 +1,7 @@
 package fi.haagahelia.course.web;
 
 import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 
@@ -13,7 +14,8 @@ public class DemoController {
 	}  
     
     @RequestMapping(value="/hello")
-	public String helloSecure() {
+	public String helloSecure(Model model) {
+    	model.addAttribute("name", "jukka");
 		return "hello";
 	}
     
