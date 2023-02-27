@@ -1,6 +1,6 @@
 package fi.haagahelia.course.domain;
 
-import jakarta.persistence.*;
+import javax.persistence.*;
 
 @Entity
 @Table(name="UserTable")
