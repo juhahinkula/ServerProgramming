@@ -21,7 +21,7 @@ public class DemoController {
 		UserDetails user = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
 		String username = user.getUsername();
 		System.out.println("USERNAME: " + username);
-    	model.addAttribute("name", "jukka");
+    	model.addAttribute("name", username);
 		return "hello";
 	}
     
