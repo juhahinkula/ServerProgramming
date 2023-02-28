@@ -13,13 +13,13 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import jakarta.validation.*;
 
 import fi.haagahelia.course.domain.SignupForm;
-import fi.haagahelia.course.domain.User;
-import fi.haagahelia.course.domain.UserRepository;
+import fi.haagahelia.course.domain.AppUser;
+import fi.haagahelia.course.domain.AppUserRepository;
 
 @Controller
 public class UserController {
 	@Autowired
-    private UserRepository repository; 
+    private AppUserRepository repository; 
 	
     @RequestMapping(value = "signup")
     public String addStudent(Model model){
@@ -43,7 +43,7 @@ public class UserController {
 		    	BCryptPasswordEncoder bc = new BCryptPasswordEncoder();
 		    	String hashPwd = bc.encode(pwd);
 	
-		    	User newUser = new User();
+		    	AppUser newUser = new AppUser();
 		    	newUser.setPasswordHash(hashPwd);
 		    	newUser.setUsername(signupForm.getUsername());
 		    	newUser.setRole("USER");

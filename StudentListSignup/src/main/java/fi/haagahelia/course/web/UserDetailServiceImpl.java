@@ -7,24 +7,24 @@ import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.stereotype.Service;
 
-import fi.haagahelia.course.domain.User;
-import fi.haagahelia.course.domain.UserRepository;
+import fi.haagahelia.course.domain.AppUser;
+import fi.haagahelia.course.domain.AppUserRepository;
 
 /**
  * This class is used by spring security to authenticate and authorize user
  **/
 @Service
 public class UserDetailServiceImpl implements UserDetailsService  {
-	private final UserRepository repository;
+	private final AppUserRepository repository;
 
 	@Autowired
-	public UserDetailServiceImpl(UserRepository userRepository) {
+	public UserDetailServiceImpl(AppUserRepository userRepository) {
 		this.repository = userRepository;
 	}
 
     @Override
     public UserDetails loadUserByUsername(String username) throws UsernameNotFoundException {   
-    	User curruser = repository.findByUsername(username);
+    	AppUser curruser = repository.findByUsername(username);
         UserDetails user = new org.springframework.security.core.userdetails.User(username, curruser.getPasswordHash(), 
         		AuthorityUtils.createAuthorityList(curruser.getRole()));
         return user;

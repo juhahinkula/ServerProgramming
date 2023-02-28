@@ -4,11 +4,11 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fi.haagahelia.course</groupId>
-	<artifactId>StudentListCrud</artifactId>
+	<artifactId>StudentListSignUp</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>StudentListCrud</name>
+	<name>StudentListSignUp</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
@@ -36,7 +36,6 @@
 		<dependency>
 			<groupId>org.thymeleaf.extras</groupId>
 			<artifactId>thymeleaf-extras-springsecurity6</artifactId>
-			<version>3.1.1.RELEASE</version>
 		</dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
