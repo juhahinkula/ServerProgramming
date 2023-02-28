@@ -23,6 +23,7 @@ public class WebSecurityConfig  {
                 .and()
             .formLogin()
                 .loginPage("/login")
+                .defaultSuccessUrl("/home", true)
                 .permitAll()
                 .and()
             .logout()
