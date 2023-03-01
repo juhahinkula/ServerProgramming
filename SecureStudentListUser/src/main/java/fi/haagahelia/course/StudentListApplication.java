@@ -12,8 +12,8 @@ import fi.haagahelia.course.domain.Department;
 import fi.haagahelia.course.domain.DepartmentRepository;
 import fi.haagahelia.course.domain.Student;
 import fi.haagahelia.course.domain.StudentRepository;
-import fi.haagahelia.course.domain.User;
-import fi.haagahelia.course.domain.UserRepository;
+import fi.haagahelia.course.domain.AppUser;
+import fi.haagahelia.course.domain.AppUserRepository;
 
 @SpringBootApplication
 public class StudentListApplication {
@@ -24,7 +24,7 @@ public class StudentListApplication {
 	}
 	
 	@Bean
-	public CommandLineRunner studentDemo(StudentRepository srepository, DepartmentRepository drepository, UserRepository urepository) {
+	public CommandLineRunner studentDemo(StudentRepository srepository, DepartmentRepository drepository, AppUserRepository urepository) {
 		return (args) -> {
 			log.info("save a couple of students");
 			drepository.save(new Department("IT"));
@@ -35,8 +35,8 @@ public class StudentListApplication {
 			srepository.save(new Student("Katy", "Kateson", "kate@kate.com", drepository.findByName("Business").get(0)));	
 			
 			// Create users: admin/admin user/user
-			User user1 = new User("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
-			User user2 = new User("admin", "$2a$10$0MMwY.IQqpsVc1jC8u7IJ.2rT8b0Cd3b3sfIBGV2zfgnPGtT4r0.C", "ADMIN");
+			AppUser user1 = new AppUser("user", "$2a$06$3jYRJrg0ghaaypjZ/.g4SethoeA51ph3UD4kZi9oPkeMTpjKU5uo6", "USER");
+			AppUser user2 = new AppUser("admin", "$2a$10$0MMwY.IQqpsVc1jC8u7IJ.2rT8b0Cd3b3sfIBGV2zfgnPGtT4r0.C", "ADMIN");
 			urepository.save(user1);
 			urepository.save(user2);
 			
