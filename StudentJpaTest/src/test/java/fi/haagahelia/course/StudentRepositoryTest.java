@@ -15,7 +15,7 @@ import fi.haagahelia.course.domain.Department;
 import fi.haagahelia.course.domain.Student;
 import fi.haagahelia.course.domain.StudentRepository;
 
-@ExtendWith(SpringExtension.class)
+//@ExtendWith(SpringExtension.class)
 @DataJpaTest
 public class StudentRepositoryTest {
 

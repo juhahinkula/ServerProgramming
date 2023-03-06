@@ -2,12 +2,9 @@ package fi.haagahelia.course;
 
 import static org.assertj.core.api.Assertions.assertThat;
 
+import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
-import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.extension.ExtendWith;
-import org.springframework.test.context.junit.jupiter.SpringExtension;
-
 
 import fi.haagahelia.course.web.HelloController;
 
@@ -17,7 +14,7 @@ import fi.haagahelia.course.web.HelloController;
  * @author h01270
  *
  */
-@ExtendWith(SpringExtension.class)
+//@ExtendWith(SpringExtension.class) not needed when using JUnit5
 @SpringBootTest
 public class HellotestApplicationTests {
 
