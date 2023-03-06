@@ -4,22 +4,29 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>fi.haagahelia.course</groupId>
-	<artifactId>StudentListSecure</artifactId>
+	<artifactId>StudentListSecureInMemoryUsers</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>jar</packaging>
 
-	<name>StudentListSecure</name>
+	<name>StudentListSecureInMemoryUsers</name>
 	<description>Demo project for Spring Boot</description>
 
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 
-		<version>3.0.1</version>
+		<version>3.0.2</version>
 		<relativePath /> <!-- lookup parent from repository -->
 
 	</parent>
 
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+
+		<java.version>17</java.version>
+
+	</properties>
 
 	<dependencies>
 		<dependency>
@@ -47,7 +54,7 @@
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-		       <dependency>
+		<dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-actuator</artifactId>
         </dependency>
