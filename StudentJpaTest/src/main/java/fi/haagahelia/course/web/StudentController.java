@@ -5,6 +5,8 @@ import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.access.prepost.PreAuthorize;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.security.core.userdetails.UserDetails;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -32,7 +34,11 @@ public class StudentController {
 	
 	// Show all students
     @RequestMapping(value="/studentlist")
-    public String studentList(Model model) {	
+    public String studentList(Model model) {
+    	UserDetails user = (UserDetails) SecurityContextHolder.getContext().getAuthentication().getPrincipal();
+		String username = user.getUsername();
+		System.out.println("USERNAME: " + username);
+    	model.addAttribute("name", username);
         model.addAttribute("students", repository.findAll());
         return "studentlist";
     }
