@@ -19,7 +19,7 @@ import fi.haagahelia.course.domain.StudentRepository;
 //@DataJpaTest
 
 @ExtendWith(SpringExtension.class)
-@SpringBootTest(classes = StudentApplication.class)
+@SpringBootTest(classes = StudentListApplication.class)
 @AutoConfigureTestDatabase(replace = AutoConfigureTestDatabase.Replace.NONE)
 public class StudentRepositoryTest {
 
